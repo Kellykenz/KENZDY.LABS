@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KENZDY.LABS</title>
+    <link rel="stylesheet" href="project2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">KENZDY MUSIC</div>
+            <ul class="nav-links">
+                <li class="close-btn">&times;</li> <!-- This is the close button -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to KENZDY Music</h1>
+            <p>Creating vibes, dropping beats, making hits.</p>
+            <a href="#music" class="btn">Listen Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am KENZDY, a passionate music artist dedicated to creating tracks that move the soul. From producing beats
+            to performing live, I aim to connect with every listener.</p>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="music">
+        <h2>My Music</h2>
+        <div class="music-grid">
+            <div class="track">
+                <h3 style="padding-bottom: 20px;">FREE MIND - TEMS</h3>
+                <audio controls>
+                    <source src="freemind.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="track" style="background-color: rgb(206, 149, 7);">
+                <h3 style="padding-bottom: 20px;">REPLAY - TEMS</h3>
+                <audio controls>
+                    <source src="replay.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="track" >
+                <h3 style="padding-bottom: 20px;">RAINDACE - DAVE FT TEMS</h3>
+                <audio controls>
+                    <source src="raindance.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <div class="event-cards">
+            <div class="card">
+                <h3>Live Concert</h3>
+                <p>Date: 15th Jan 2026</p>
+                <p>Location: Warri Arena</p>
+            </div>
+            <div class="card">
+                <h3>Music Festival</h3>
+                <p>Date: 28th Feb 2026</p>
+                <p>Location: Lagos Music Hub</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact / Booking</h2>
+        <form action="mailto:kelsonspencer22@gmail.com" method="post" enctype="text/plain">
+            <input style="color:gold; background-color: black;" type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea style="color:gold; background-color: black;" placeholder="Your Message" rows="5"
+                required></textarea>
+            <button style="border-radius: 10px; border: transparent" type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <div class="logo">KENZDY</div>
+                <p class="footer-bio">
+                    Exploring the intersection of rhythm and soul. Independent sounds crafted in Lagos, shared with the
+                    world.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4 style="font-family: cursive;">Navigation</h4>
+                <ul class="nav-links">
+                    <li class="close-btn">&times;</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-contact">
+                <h4 style="font-family: cursive;">Management</h4>
+                <p>Inquiries: <a href="mailto:mgmt@artistname.com">kelsonspencer22@gmail.com</a></p>
+                <p>Booking: <a href="mailto:booking@artistname.com">kelsonspencer1@gmail.com</a></p>
+                <p>Lagos, Nigeria</p>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 style="font-family: cursive;">Join the Inner Circle</h4>
+                <p>Get exclusive access to unreleased demos and pre-sale tickets.</p>
+                <form class="footer-form" action="mailto:kelsonspencer22@gmail.com" method="post" enctype="text/plain">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kenzdy Music Group. All Rights Reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Burger menu toggle
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const closeBtn = document.querySelector('.nav-links .close-btn');
+        const navLinks = document.querySelectorAll('.nav-links li a');
+
+        // Open menu
+        burger.addEventListener('click', () => {
+            nav.classList.add('active');
+        });
+
+        // Close menu with close button
+        closeBtn.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+
+        // Optional: Close menu when clicking any link (mobile)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
