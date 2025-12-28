@@ -194,7 +194,7 @@ footer {
 /* Responsive */
 @media(max-width:768px){
     *{
-        font-family: cursive;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
   .nav-links {
     position: fixed;
@@ -374,6 +374,7 @@ footer {
   .footer-form button { padding: 12px; border-radius: 2px; margin-top: 10px; }
   .footer-bottom { flex-direction: column; gap: 15px; }
 }
+
 
 
 
