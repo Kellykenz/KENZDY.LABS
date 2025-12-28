@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KENZDY.LABS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <h2 class="logo" style="font-family: cursive;">KENZDY</h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h4 style="padding-bottom: 10px; font-family: cursive; ">KELSON ANDY SPENCER...</h4>
+        <h2 style="font-family: cursive;">I design & build<br><span>clean digital experiences</span></h2>
+        <p style="font-family: cursive;">Web Developer focused on clarity, elegance, and usability.</p>
+        <a href="#work" class="btn" style="font-family: cursive;">View Work</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <h3>About Me</h3>
+        <p>
+            I’m a web developer who believes simplicity is power.
+            I build responsive, user-focused websites using modern HTML & CSS.
+            Every line of code has intention.
+        </p>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="work">
+        <h3>Selected Work</h3>
+
+        <div class="projects">
+            <a href="project1.html" style="text-decoration: none; color:white">
+                <div class="card">
+                    <h4>Music Website</h4>
+                    <p>Minimal layout with strong branding and smooth UI.</p>
+                </div>
+            </a>
+
+            <a href="index copy.html" style="text-decoration: none; color:white">
+                <div class="card">
+                    <h4>Landing Page</h4>
+                    <p>High-conversion design built with pure HTML & CSS.</p>
+                </div>
+            </a>
+
+            <a href="index.html" style="text-decoration: none; color:white">
+                <div class="card">
+                    <h4>Portfolio Concept</h4>
+                    <p>A luxury-inspired personal brand website.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h3>Let’s Work</h3>
+        <p>Have a project or idea? Let’s build something timeless.</p>
+        <a href="mailto:kelsonspencer@gmail.com" class="btn gold">Get in Touch</a>
+    </section>
+
+    <footer>
+        <p>© 2025 KENZDY. Crafted with precision.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach(sec => {
+            sec.style.opacity = 0;
+            sec.style.transform = 'translateY(40px)';
+            sec.style.transition = '0.8s ease';
+            observer.observe(sec);
+    </script>
+</body>
+
+</html>
