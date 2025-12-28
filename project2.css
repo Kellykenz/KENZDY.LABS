@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: cursive;
+  font-family: "Segoe Script", "Apple Chancery", "Comic Sans MS", cursive;
 }
 
 /* Body */
@@ -374,3 +374,4 @@ footer {
   .footer-form button { padding: 12px; border-radius: 2px; margin-top: 10px; }
   .footer-bottom { flex-direction: column; gap: 15px; }
 }
+
