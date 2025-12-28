@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KENZDY.LABS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Clash+Display:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0f0f0f;
+            font-family: 'Inter', sans-serif;
+            color: #94A3B8;
+            scroll-behavior: smooth;
+        }
+        h1, h2 { font-family: 'Clash Display', sans-serif; }
+        
+        /* Custom Accent Colors */
+        .text-violet { color: #8B5CF6; }
+        .bg-violet { background-color: #8B5CF6; }
+        .border-acid { border-color: #D9F99D; }
+        .text-acid { color: #D9F99D; }
+
+        .project-card:hover .project-image {
+            transform: scale(1.02);
+            filter: grayscale(0%);
+        }
+        .project-image {
+            transition: all 0.4s ease;
+            filter: grayscale(100%);
+        }
+        
+        /* Pulse Animation for Status */
+        .pulse {
+            box-shadow: 0 0 0 0 rgba(217, 249, 157, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(217, 249, 157, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(217, 249, 157, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(217, 249, 157, 0); }
+        }
+    </style>
+</head>
+<body class="selection:bg-acid selection:text-black">
+
+    <nav class="fixed top-0 w-full z-50 px-6 py-8 flex justify-between items-center mix-blend-difference">
+        <span class="text-white font-bold tracking-tighter text-xl">KENZDY</span>
+        <div class="flex gap-6 text-sm uppercase tracking-widest text-white">
+            <a href="#work" class="hover:text-violet transition">Work</a>
+            <a href="#contact" class="hover:text-violet transition">Contact</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6">
+        
+        <section class="h-screen flex flex-col justify-center">
+            <div class="inline-flex items-center gap-2 mb-6 border border-zinc-800 rounded-full px-4 py-1.5 w-fit">
+                <span class="h-2 w-2 rounded-full bg-acid pulse"></span>
+                <span class="text-xs font-medium text-zinc-400 uppercase tracking-widest">Available for new projects</span>
+            </div>
+            <h1 class="text-5xl md:text-8xl text-white leading-[0.9] mb-8">
+                I build <span class="text-violet">digital products</span> that solve complex problems.
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
+                Full-stack developer and designer focused on high-performance interfaces and scalable systems. Currently based in Nigeria.
+            </p>
+            <a href="#work" class="group flex items-center gap-4 text-white font-bold">
+                VIEW SELECTED WORK 
+                <span class="p-4 rounded-full border border-zinc-700 group-hover:bg-violet group-hover:border-violet transition-all">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7l10 10M17 7v10H7"/></svg>
+                </span>
+            </a>
+        </section>
+
+        <section id="work" class="py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div class="project-card group cursor-pointer">
+                    <div class="overflow-hidden bg-zinc-900 rounded-2xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" alt="Project 1" class="project-image w-full h-[400px] object-cover">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl text-white mb-2">Nexus Analytics</h3>
+                            <p class="text-zinc-500">Saas Platform • 2024</p>
+                        </div>
+                        <span class="text-acid border border-acid/30 px-3 py-1 rounded text-xs uppercase tracking-widest">View Case</span>
+                    </div>
+                </div>
+
+                <div class="project-card group cursor-pointer">
+                    <div class="overflow-hidden bg-zinc-900 rounded-2xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800" alt="Project 2" class="project-image w-full h-[400px] object-cover">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl text-white mb-2">Arcade Engine</h3>
+                            <p class="text-zinc-500">Fintech API • 2023</p>
+                        </div>
+                        <span class="text-acid border border-acid/30 px-3 py-1 rounded text-xs uppercase tracking-widest">View Case</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-24 border-y border-zinc-900">
+            <p class="text-xs uppercase tracking-[0.3em] mb-12 text-center">The Tech Stack</p>
+            <div class="flex flex-wrap justify-center gap-x-12 gap-y-8 text-2xl md:text-4xl font-bold text-zinc-700">
+                <span class="hover:text-white transition cursor-default italic">React</span>
+                <span class="hover:text-white transition cursor-default">TypeScript</span>
+                <span class="hover:text-white transition cursor-default italic">Node.js</span>
+                <span class="hover:text-white transition cursor-default">Next.js</span>
+                <span class="hover:text-white transition cursor-default italic">PostgreSQL</span>
+                <span class="hover:text-white transition cursor-default">Figma</span>
+            </div>
+        </section>
+
+        <section id="contact" class="py-32 text-center">
+            <h2 class="text-4xl md:text-7xl text-white mb-12">Let's build something <br> remarkable.</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-8 items-center">
+                <a href="mailto:kelsonspencer22@gmail.com" class="text-xl md:text-2xl text-violet underline underline-offset-8 decoration-2 hover:text-acid transition">hello@yoursite.com</a>
+                <div class="flex gap-6">
+                    <a href="sorry.html" class="hover:text-white transition">Facebook</a>
+                    <a href="sorry.html" class="hover:text-white transition">Instagram</a>
+                    <a href="sorry.html" class="hover:text-white transition">Tiktok</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="p-12 text-center text-xs tracking-widest text-zinc-600 uppercase">
+        &copy; 2025 KENZDY • All Rights Reserved
+    </footer>
+
+</body>
+</html>
