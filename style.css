@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe Script", "Apple Chancery", "Comic Sans Ms", cursive;
+  font-family: "Segoe Script", "Apple Chancery", "Comic Sans MS", cursive;
 }
 
 body {
@@ -158,4 +158,5 @@ footer {
     padding: 80px 6%;
   }
 }
+
 
